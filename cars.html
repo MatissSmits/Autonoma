@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Autonoma </title>
+        <link href="pstyles.css" rel="stylesheet" type="text/css" />
+     
+    </head>
+    <body>
+        <marquee><h3>Šo mēnesi ir 30% atlaide visiem transportlīdzekļiem un Jūs variet laimēt bezmaksas braucienu ar jebkuru transportlīdzekli, Pasteidzieties!</h3></marquee>
+		<div class="logoBackground">
+  	<div class="logo"><h6>Automašīnas<h6></div>
+    
+  </div>
+		<div class="menu">
+  	<ul>
+    	<li><a href="index.html">Mājas</a></li>
+        <li><a href="customer.html">Klienti</a></li>
+		<li><a href="chauffeur.html">Šoferis</a></li>
+        <li id="active"><a href="">Automobīļi</a></li>
+        <li><a href="book.html">Īrēt automobīli</a></li>
+		<li><a href="return.html">Atgriest automobīli</a></li>
+		<li><a href="report.html">Atsauksmes</a></li>
+    </ul>
+  </div>
+	
+<div class="leftContent">
+    <b><form action="registercar.php" method="post" >
+	<h1> Pievienot Automašīnu </h1>
+	Licences Nr: <input type="text" name="lno"/><br><br>
+	Modelis: <input type="text" name="model"/><br><br>
+	Gads : <input type="text" name="year"/><br><br>
+	Automašīnas tips: <select name = "Cartype">
+<option>Kompakts</option>
+<option>Vidējs</option>
+<option>Liels</option>
+<option>Džips</option>
+<option>Busiņš</option>
+<option>Smagā mašīna</option>
+</select><br><br>
+Automašīnas īpašnieks: <select name = "Carown">
+<option>Individuāls</option>
+<option>Banka</option>
+<option>Uzņēmums</option>
+</select><br><br>
+<h2>Ievadiet detalizētu informāciju par īpašnieku : </h2><br>
+Unikāls ID: <input type="text" name="uid"/><br><br>
+Vārds: <input type="text" name="oname"/><br><br>
+Pilsēta : <input type="text" name="city"/><br><br>
+<input type="submit" name="submit" value="Register">
+</form></b>	
+    </div>	
+	
+	
+	<div class="rightContent">
+	<h1> SKATĪT AUTO UN LIKMES</h1>
+	<form action="viewcar.php" method="post">
+		Lai skatītu, atlasiet Automašīnas tips: <select name="Ctype">
+<option>Kompakts</option>
+<option>Vidējs</option>
+<option>Liels</option>
+<option>Džips</option>
+<option>Busiņš</option>
+<option>Smagā mašīna</option>
+</select>
+<input type="submit" name="submit1" value="View">
+</form>
+
+<br><br><br><br>
+
+<h1> 
+	ATJAUNINĀT NOMAS LIKMES </h1>
+<form action="update.php" method="post">
+	Lai atjauninātu, atlasiet Automašīnas tips: <select name = "Ctype">
+<option>Kompakts</option>
+<option>Vidējs</option>
+<option>Liels</option>
+<option>Džips</option>
+<option>Busiņš</option>
+<option>Smagā mašīna</option>
+</select><br><br>
+
+Dienas likme: <input type="text" name="udrate"/><br><br>
+Nedēļas likme: <input type="text" name="uwrate"/><br><br>
+<input type="submit" name="submit1" value="Update">
+</form>
+	</div>
+	
+	</body>
+	</html>

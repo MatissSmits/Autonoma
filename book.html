@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Autonoma </title>
+        <link href="pstyles.css" rel="stylesheet" type="text/css" />
+     
+    </head>
+    <body>
+        <marquee><h3>Šo mēnesi ir 30% atlaide visiem transportlīdzekļiem un Jūs variet laimēt bezmaksas braucienu ar jebkuru transportlīdzekli, Pasteidzieties!</h3></marquee>
+		<div class="logoBackground">
+  	<div class="logo"><h6>Īrēšana<h6></div>
+    
+  </div>
+		<div class="menu">
+  	<ul>
+    	<li><a href="index.html">Mājas</a></li>
+        <li><a href="customer.html">Klienti</a></li>
+		<li><a href="chauffeur.html">Šoferis</a></li>
+        <li><a href="cars.html">Automobīļi</a></li>
+        <li id="active"><a href="">Īrēt automobīli</a></li>
+		<li><a href="return.html">Atgriest automobīli</a></li>
+		<li><a href="report.html">Atsauksmes</a></li>
+    </ul>
+  </div>
+	
+<div class="leftContent">
+    <b><form action="available.php" method="post" >
+		<h1> Īrēt automobīli </h1><br><br>
+Ievadiet klienta ID: <input type="text" name="cbid"/><br><br>
+Ievadiet datumu yyyy-mm-dd: <input type="text" name="Sdate"/><br><br>
+Izvēlieties automašīnas tipu: <select name = "Ctype">
+<option>Kompakts</option>
+<option>Vidējs</option>
+<option>Liels</option>
+<option>Džips</option>
+<option>Busiņš</option>
+<option>Smagā mašīna</option>
+</select><br><br>
+Īres veids: <select name = "Rtype">
+<option>Katru dienu</option>
+<option>Iknedēļas</option>
+</select><br><br>
+Dienu skaits : <select name = "Days">
+<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option>
+</select><br><br>
+Nedēļu skaits : <select name = "Weeks">
+<option>0</option><option>1</option><option>2</option><option>3</option>
+</select><br><br>
+<input type="submit" name="check" value="Check Availability"><br><br>
+
+Ievadiet transportlīdzekļa  id: <input type="text" name="Vehicleid"/><br><br>
+<input type="submit" name="book" value="Book">
+</form></b>	
+
+<br>
+<b><form action="viewrental.php" method="post" >
+		<h2> SKATĪT AKTĪVĀS UN PLĀNOTĀS NOMAS </h2>
+		<input type="submit" name="submit1" value="View">
+</form></b>
+    </div>	
+	
+	
+	<div class="rightContent">
+<SCRIPT LANGUAGE="JavaScript">
+
+var num=1
+img1 = new Image ()
+img1.src = "images/1.jpg"
+img2 = new Image ()
+img2.src = "images/2.jpg"
+img3 = new Image ()
+img3.src = "images/3.jpg"
+img4 = new Image ()
+img4.src = "images/4.jpg" 
+img5 = new Image ()
+img5.src = "images/5.jpeg" 
+img6 = new Image ()
+img6.src = "images/6.jpg" 
+
+text1 = "Vidējs"
+text2 = "Džips"
+text3 = "Kompakts"
+text4 = "Liels"
+text5 = "Kravas mašīna"
+text6 = "Busiņš"
+
+function slideshowUp()
+{
+num=num+1
+if (num==7)
+{num=1}
+document.mypic.src=eval("img"+num+".src")
+document.raj.iname.value=eval("text"+num)
+}
+
+function slideshowBack()
+{
+num=num-1
+if (num==0)
+{num=6}
+document.mypic.src=eval("img"+num+".src")
+document.raj.iname.value=eval("text"+num)
+}
+
+</SCRIPT>
+<!-- The Image and Form Codes are Below --> 
+<CENTER>
+<IMG SRC="images/1.jpg" NAME="mypic" BORDER=0 HEIGHT="380" WIDTH="500">
+<FORM NAME="raj">
+<INPUT TYPE="text" WIDTH="100" NAME="iname" VALUE="Vidējs">
+</FORM><A HREF="JavaScript:slideshowBack()"> Back</A>  <A HREF="JavaScript:slideshowUp()"> Next</A> 
+
+
+	</div>
+	
+	</body>
+	</html>
